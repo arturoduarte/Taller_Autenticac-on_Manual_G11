@@ -7,7 +7,6 @@ class HistoriesController < ApplicationController
 	def index
 		if helpers.logged? # si esta logueado
 			#muestra solo las historias que pertenecen al dicho usuario
-			
 			@histories = User.find(helpers.current_user.id).histories
 		else
 			@histories = History.all
